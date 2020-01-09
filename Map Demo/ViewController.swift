@@ -47,8 +47,14 @@ class ViewController: UIViewController {
         annotation.subtitle = "City of Dreams"
         annotation.coordinate = location
         mapView.addAnnotation(annotation)
+        
+        // add long press gesture
+        let uilpgr = UILongPressGestureRecognizer(target: self, action: #selector(longPress))
+        mapView.addGestureRecognizer(uilpgr)
     }
-
+    @objc func longPress(gestureRecognizer:UIGestureRecognizer){
+        
+    }
 
 }
 
